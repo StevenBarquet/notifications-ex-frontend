@@ -1,0 +1,5 @@
+node_modules/
+**/*.json
+prodServer.js
+dist/
+src/javascript/declarations.d.ts

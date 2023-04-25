@@ -1,5 +1,9 @@
 module.exports = {
-  env: { browser: true, es2020: true },
+  env: {
+    browser: true,
+    es2020: true,
+    node: true, // Agrega esta línea
+  },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -12,4 +16,4 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': 'warn',
   },
-}
+};
