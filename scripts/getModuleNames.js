@@ -11,7 +11,7 @@ fs.readdir(nodeModulesPath, { withFileTypes: true }, (err, entries) => {
 
   const folderNames = entries
     .filter(entry => entry.isDirectory())
-    .map(entry => entry.name);
+    .map(entry => `!node_modules/${entry.name}/`);
 
   console.log('Carpetas en node_modules:');
   console.log(folderNames.join('\n'));
