@@ -6,6 +6,7 @@
   "scripts": {
     "_0": "-----------------------------MAIN LOCAL------------------------------------------",
     "dev": "vite",
+    "install": "npm install -omit @dtci/spellbook,@dtci/triton",
     "prod": "npm run build && cross-env NODE_ENV=production node prodServer.js",
     "_1": "-----------------------------PROD SCRIPTS------------------------------------------",
     "preview": "vite preview",
