@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { exec } from 'child_process';
 
+
 fs.readFile('package.json', 'utf8', async (err, data) => {
   if (err) {
     console.error('Error al leer el archivo package.json:', err);
@@ -17,49 +18,30 @@ fs.readFile('package.json', 'utf8', async (err, data) => {
     return;
   }
   
-  console.log('Se van a instalar publicDependencies', publicDependencies);
   const dependenciesToInstall = Object.entries(publicDependencies)
-    .map(([dependency, version]) => `${dependency}@${version}`)
-    .join(' ');
-
+  .map(([dependency, version]) => `${dependency}@${version}`)
+  .join(' ');
+  
   const installCommand = `npm i -E ${dependenciesToInstall}`;
+  console.log('Dependencies:\n', installCommand);
+  
 
-  await exec(installCommand, (error, stdout, stderr) => {
-    if (error) {
-      console.error(`Error al ejecutar el comando: ${error.message}`);
-      return;
-    }
-    if (stderr) {
-      console.error(`Error en la salida del comando: ${stderr}`);
-      return;
-    }
-    console.log(`Dependencias instaladas correctamente:\n${stdout}`);
-  });
+  // ---Instala devDependencies
+  const publicDevDependencies = packageJson?.publicDevDependencies;
 
-   // ---Instala devDependencies
-   const publicDevDependencies = packageJson?.publicDevDependencies;
+  if (!publicDevDependencies) {
+    console.error('No se encontraron publicDevDependencies en el archivo package.json');
+    return;
+  }
 
-   if (!publicDevDependencies) {
-     console.error('No se encontraron publicDevDependencies en el archivo package.json');
-     return;
-   }
+  const devDependenciesToInstall = Object.entries(publicDevDependencies)
+  .map(([dependency, version]) => `${dependency}@${version}`)
+  .join(' ');
 
-   console.log('Se van a instalar publicDevDependencies', publicDevDependencies);
-   const devDependenciesToInstall = Object.entries(publicDevDependencies)
-     .map(([dependency, version]) => `${dependency}@${version}`)
-     .join(' ');
- 
-   const installCommand2 = `npm i -E ${devDependenciesToInstall}`;
- 
-   await exec(installCommand2, (error, stdout, stderr) => {
-     if (error) {
-       console.error(`Error al ejecutar el comando: ${error.message}`);
-       return;
-     }
-     if (stderr) {
-       console.error(`Error en la salida del comando: ${stderr}`);
-       return;
-     }
-     console.log(`Dependencias instaladas correctamente:\n${stdout}`);
-   });
+  const installCommand2 = `npm i -D -E ${devDependenciesToInstall}`;
+  console.log('\ndevDependencies:\n', installCommand2,'\n');
+
 });
+
+
+
