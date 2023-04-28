@@ -11,12 +11,13 @@ fs.readFile('package.json', 'utf8', async (err, data) => {
 
   // ---Instala dependencies
   const publicDependencies = packageJson?.publicDependencies;
-
+  
   if (!publicDependencies) {
     console.error('No se encontraron publicDependencies en el archivo package.json');
     return;
   }
-
+  
+  console.log('Se van a instalar publicDependencies', publicDependencies);
   const dependenciesToInstall = Object.entries(publicDependencies)
     .map(([dependency, version]) => `${dependency}@${version}`)
     .join(' ');
@@ -42,7 +43,8 @@ fs.readFile('package.json', 'utf8', async (err, data) => {
      console.error('No se encontraron publicDevDependencies en el archivo package.json');
      return;
    }
- 
+
+   console.log('Se van a instalar publicDevDependencies', publicDevDependencies);
    const devDependenciesToInstall = Object.entries(publicDevDependencies)
      .map(([dependency, version]) => `${dependency}@${version}`)
      .join(' ');
