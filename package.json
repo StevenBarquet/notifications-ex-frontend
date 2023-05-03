@@ -16,14 +16,12 @@
     "gen-comp": "npx plop --plopfile generators/plopfile.js"
   },
   "dependencies": {
-    "@dtci/dash": "2.4.0",
-    "@dtci/spellbook": "15.6.0"
-  },
-  "publicDependencies": {
+    "@sudo-boss/dash": "2.4.1",
+    "@sudo-boss/spellbook": "15.6.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
-  "publicDevDependencies": {
+  "devDependencies": {
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "@vitejs/plugin-react": "4.0.0-beta.0",
