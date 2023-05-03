@@ -29,7 +29,7 @@ function App() {
       <Badge color="active" shape="pill" size="medium">
         Pending
       </Badge>
-      <Button>Holo</Button>
+      <Button colorType='secondary'>Holo</Button>
     </>
   );
 }
