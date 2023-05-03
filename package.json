@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@sudo-boss/dash": "2.4.1",
-    "@sudo-boss/spellbook": "15.6.1",
+    "@sudo-boss/spellbook": "15.6.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

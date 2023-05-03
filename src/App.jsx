@@ -2,8 +2,8 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
-import Badge from '@dtci/spellbook/Badge';
-import Button from '@dtci/spellbook/Button';
+import Badge from '@sudo-boss/spellbook/Badge';
+import Button from '@sudo-boss/spellbook/Button';
 
 function App() {
   const [count, setCount] = useState(0);
