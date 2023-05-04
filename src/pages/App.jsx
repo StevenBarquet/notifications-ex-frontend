@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
+import reactLogo from 'src/assets/react.svg';
 import viteLogo from '/vite.svg';
-import './App.css';
+import 'src/styles/App.css';
 import Badge from '@sudo-boss/spellbook/Badge';
 import Button from '@sudo-boss/spellbook/Button';
 
@@ -20,7 +20,10 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+        <Button onClick={() => setCount((count) => count + 1)} colorType="primary">
+          count is {count}
+        </Button>
+
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
@@ -29,7 +32,6 @@ function App() {
       <Badge color="active" shape="pill" size="medium">
         Pending
       </Badge>
-      <Button colorType='secondary'>Holo</Button>
     </>
   );
 }
