@@ -1,0 +1,32 @@
+//----------------------Main Colors------------------
+//----------------------Dark
+$colorDark1: #717171;
+$colorDark2: #5e5e5e;
+$colorDark3: #555555;
+$colorDark4: #474747;
+$colorDark5: #303030;
+$colorDark6: #1d1d1d;
+$colorDark7: #000000;
+// ---Default
+$colorDark: $colorDark5;
+
+//----------------------Light
+$colorLight1: #ffffff;
+$colorLight2: #e9e9e9;
+$colorLight3: #dbdbdb;
+$colorLight4: #cacaca;
+$colorLight5: #bababa;
+$colorLight6: #b0b0b0;
+$colorLight7: #a5a5a5;
+// ---Default
+$colorLight: $colorLight1;
+
+//----------------------Specials------------------
+$colorSuccess: #3ab415;
+$colorWarning: #f1df17;
+$colorError: #ff4d4f;
+
+//----------------------Sizes------------------
+$headerHeight: 64px;
+$footerHeight: 64px;
+$footerHeightMobile: 310px;

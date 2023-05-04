@@ -16,7 +16,7 @@ export function GlobalLayout({ children }) {
   //const classNames = useLayoutStyles();
   // ----------------------- RENDER
   return (
-    <div >
+    <div className="GlobalLayout">
       <header>
         <Navbar />
       </header>

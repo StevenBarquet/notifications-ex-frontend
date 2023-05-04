@@ -1,0 +1,16 @@
+/** Limit the number of lines with an ellipsis. $lines is the number of lines to limit. */
+@mixin limitTextLines($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/** Limit the maximum width of a text with an ellipsis. */
+@mixin limitTextWidth($max-width) {
+  max-width: $max-width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

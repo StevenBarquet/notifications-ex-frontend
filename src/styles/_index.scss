@@ -1,4 +1,6 @@
-body {
-  margin: 0;
-  padding: 0;
-}
+// ---Packages styles
+@import '/node_modules/@sudo-boss/spellbook/spellbook.css';
+@import '/node_modules/@sudo-boss/spellbook/sb-theme-magenta.css';
+// ---Global local styles
+@import './theme.scss';
+@import './mainGlobal.scss';

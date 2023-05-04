@@ -15,6 +15,9 @@ export default defineConfig({
     alias: [{ find: 'src', replacement: path.resolve(__dirname, 'src') }],
   },
   css: {
+    modules: {
+      generateScopedName: '[local]', // Conserva el nombre original de la clase
+    },
     preprocessorOptions: {
       scss: {
         implementation: sass,
