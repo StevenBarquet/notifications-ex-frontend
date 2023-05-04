@@ -1,23 +1,20 @@
-import { useState } from 'react';
-import reactLogo from 'src/assets/react.svg';
-import viteLogo from '/vite.svg';
-import 'src/styles/App.css';
+import React, { useState } from 'react';
+import style from './HomeCont.module.scss';
 import Badge from '@sudo-boss/spellbook/Badge';
 import Button from '@sudo-boss/spellbook/Button';
 
-function App() {
+/**
+ * HomeCont Component: Description of the behavior...
+ * @returns {JSX.Element}
+ */
+export function HomeCont() {
+  // -----------------------CONSTS, HOOKS, STATES
   const [count, setCount] = useState(0);
-
+  // -----------------------MAIN METHODS
+  // -----------------------AUX METHODS
+  // -----------------------RENDER
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
+    <div className={style.HomeCont}>
       <h1>Vite + React</h1>
       <div className="card">
         <Button onClick={() => setCount((count) => count + 1)} colorType="primary">
@@ -32,8 +29,6 @@ function App() {
       <Badge color="active" shape="pill" size="medium">
         Pending
       </Badge>
-    </>
+    </div>
   );
 }
-
-export default App;

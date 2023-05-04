@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import sass from 'sass';
 import path from 'path';
 
 export const PORT = 3001;
@@ -12,5 +13,12 @@ export default defineConfig({
   },
   resolve: {
     alias: [{ find: 'src', replacement: path.resolve(__dirname, 'src') }],
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        implementation: sass,
+      },
+    },
   },
 });

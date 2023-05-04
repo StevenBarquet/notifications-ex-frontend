@@ -1,4 +1,4 @@
-# common
+# COMMON
 
 Reusable components like:
 

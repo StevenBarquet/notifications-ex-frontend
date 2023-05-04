@@ -25,8 +25,8 @@ module.exports = (plop) => {
 
       const compTemplate = {
         type: 'add',
-        path: '{{path}}/{{pascalCase name}}/{{pascalCase name}}.tsx',
-        templateFile: `templates/components/${compStyles}StyleComponent.tsx.hbs`,
+        path: '{{path}}/{{pascalCase name}}/{{pascalCase name}}.jsx',
+        templateFile: `templates/components/${compStyles}StyleComponent.jsx.hbs`,
       };
 
       const styles = {
