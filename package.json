@@ -16,12 +16,12 @@
     "generate-comp": "npx plop --plopfile generators/plopfile.cjs"
   },
   "dependencies": {
-    "@reach/router": "1.3.4",
     "@sudo-boss/dash": "2.4.1",
     "@sudo-boss/spellbook": "15.6.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-helmet": "6.1.0"
+    "react-helmet": "6.1.0",
+    "react-router-dom": "6.8.1"
   },
   "devDependencies": {
     "@types/react": "18.0.28",

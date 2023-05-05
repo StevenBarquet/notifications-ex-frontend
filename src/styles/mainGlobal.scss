@@ -18,18 +18,23 @@
   footer {
     height: $footerHeight;
     padding: 0px;
-    background-color: transparent;
+    background-color: #48494a;
     font-family: 'Inter';
-    margin-top: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .sb-footer {
+      position: static;
+      font-size: 14px;
+    }
   }
 
   main {
     font-family: 'Inter';
     font-size: 16px;
     > div:first-child {
-      > div:first-child {
-        min-height: calc(100vh - ($headerHeight + $footerHeight));
-      }
+      min-height: calc(100vh - ($headerHeight + $footerHeight));
     }
   }
 }

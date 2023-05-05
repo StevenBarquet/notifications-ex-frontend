@@ -1,6 +1,7 @@
 import React from 'react';
-import { Router } from '@reach/router';
 import { Home } from 'src/pages/Home/Home';
+import { TableEx } from 'src/pages/TableEx/TableEx';
+import { Route, Routes as RoutesHolder } from 'react-router-dom';
 
 /**
  * Routes Component: First level routes
@@ -9,8 +10,9 @@ import { Home } from 'src/pages/Home/Home';
 export function Routes() {
   // -----------------------RENDER
   return (
-    <Router>
-      <Home path="/" />
-    </Router>
+    <RoutesHolder>
+      <Route path="/" element={<Home />} />
+      <Route path="/table" element={<TableEx />} />
+    </RoutesHolder>
   );
 }

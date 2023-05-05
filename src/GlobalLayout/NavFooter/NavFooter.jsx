@@ -1,3 +1,4 @@
+import Footer from '@sudo-boss/spellbook/Footer';
 import React from 'react';
 
 /**
@@ -9,5 +10,5 @@ export function NavFooter() {
   // -----------------------MAIN METHODS
   // -----------------------AUX METHODS
   // -----------------------RENDER
-  return <p>NavFooter</p>;
+  return <Footer />;
 }

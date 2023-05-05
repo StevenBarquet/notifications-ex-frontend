@@ -1,8 +1,5 @@
-import { Router } from '@reach/router';
 import React from 'react';
-
-/** Helper to get high order Router provider */
-const Child = ({ child }) => <>{child}</>;
+import { BrowserRouter as Router } from 'react-router-dom';
 
 /**
  * GlobalProvider Component: Providers for the app
@@ -14,9 +11,5 @@ export function GlobalProvider({ children }) {
   // -----------------------MAIN METHODS
   // -----------------------AUX METHODS
   // -----------------------RENDER
-  return (
-    <Router>
-      <Child child={children} default />
-    </Router>
-  );
+  return <Router>{children}</Router>;
 }
