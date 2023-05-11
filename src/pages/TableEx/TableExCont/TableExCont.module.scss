@@ -3,5 +3,13 @@
 @import '/src/styles/utils';
 
 .TableExCont {
+  font-size: 18px;
+  background-color: #e4e9fb;
+  padding-top: 50px;
+  .sb-table {
+    width: 90%;
+    background-color: #fff;
+    margin: 0px auto;
+    border-radius: 5px;
+  }
 }
-

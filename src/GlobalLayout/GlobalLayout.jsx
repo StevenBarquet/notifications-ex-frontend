@@ -3,6 +3,7 @@ import React from 'react';
 // --- Components
 import { NavFooter } from './NavFooter/NavFooter';
 import { Navbar } from './Navbar/Navbar';
+import { LoadingFullScreen } from './LoadingFullScreen/LoadingFullScreen';
 
 /**
  * GlobalLayout Component: Component that is represented globally in the application and
@@ -22,7 +23,7 @@ export function GlobalLayout({ children }) {
       </header>
       <main>
         {children}
-        {/* <LoadingFullScreen /> */}
+        <LoadingFullScreen />
       </main>
       <footer>
         <NavFooter />

@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { QueryProvider } from './QueryProvider/QueryProvider';
+import { ReduxProvider } from './ReduxProvider/ReduxProvider';
 
 /**
  * GlobalProvider Component: Providers for the app
@@ -11,5 +13,11 @@ export function GlobalProvider({ children }) {
   // -----------------------MAIN METHODS
   // -----------------------AUX METHODS
   // -----------------------RENDER
-  return <Router>{children}</Router>;
+  return (
+    <ReduxProvider>
+      <Router>
+        <QueryProvider>{children}</QueryProvider>
+      </Router>
+    </ReduxProvider>
+  );
 }

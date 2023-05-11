@@ -1,0 +1,5 @@
+export const CASES = {
+  SET_STATE: 'SET_STATE',
+  UPDATE_STATE: 'UPDATE_STATE',
+  CLEAR_STATE: 'CLEAR_STATE',
+};
