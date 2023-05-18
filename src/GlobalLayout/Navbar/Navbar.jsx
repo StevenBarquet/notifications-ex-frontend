@@ -3,6 +3,8 @@ import { Grid, GridArea } from '@sudo-boss/spellbook/Grid';
 import React from 'react';
 import style from './Navbar.module.scss';
 import { Link } from 'react-router-dom';
+import NavBar from '@sudo-boss/spellbook/NavBar';
+import { Brand } from '@sudo-boss/spellbook/NavBar';
 
 /**
  * Navbar Component:  Descripción del comportamiento...
@@ -14,26 +16,25 @@ export function Navbar() {
   // -----------------------AUX METHODS
   // -----------------------RENDER
   return (
-    <nav className={style.Navbar}>
+    <NavBar className={style.Navbar}>
       <Grid density="detailed">
         <GridArea small={2}>
-          <img
-            src="https://dtci-spellbook.s3-us-west-2.amazonaws.com/img/logos/spellbook-bright.svg"
-            className="logo"
-            alt="spellbook lib logo"
-          />
+          <Brand />
         </GridArea>
         <GridArea slim={2} small={10}>
           <Grid density="simple">
-            <GridArea small={6}>
+            <GridArea small={4}>
               <Link to="/">Home</Link>
             </GridArea>
-            <GridArea small={6}>
+            <GridArea small={4}>
               <Link to="/table">Table Example</Link>
+            </GridArea>
+            <GridArea small={4}>
+              <Link to="/table-grid">TableGrid Example</Link>
             </GridArea>
           </Grid>
         </GridArea>
       </Grid>
-    </nav>
+    </NavBar>
   );
 }
