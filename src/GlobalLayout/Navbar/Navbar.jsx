@@ -23,14 +23,17 @@ export function Navbar() {
         </GridArea>
         <GridArea slim={2} small={10}>
           <Grid density="simple">
-            <GridArea small={4}>
+            <GridArea small={3}>
               <Link to="/">Home</Link>
             </GridArea>
-            <GridArea small={4}>
+            <GridArea small={3}>
               <Link to="/table">Table Example</Link>
             </GridArea>
-            <GridArea small={4}>
-              <Link to="/table-grid">TableGrid Example</Link>
+            <GridArea small={3}>
+              <Link to="/table-grid">Socket Example</Link>
+            </GridArea>
+            <GridArea small={3}>
+              <Link to="/refetch-ex">Refetch Example</Link>
             </GridArea>
           </Grid>
         </GridArea>

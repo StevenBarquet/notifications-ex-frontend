@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './TableGridExCont.module.scss';
+import style from './RefetchExCont.module.scss';
 import {
   Table,
   TableBody,
@@ -8,30 +8,23 @@ import {
   TableHeaderCell,
   TableRow,
 } from '@sudo-boss/spellbook/Table';
-import { useQueryTableData } from 'src/services/useQueryTableData';
-import { useNotification } from './useNotification';
-import Button from '@sudo-boss/spellbook/Button';
+import { useQueryTableDataV2 } from 'src/services/useQueryTableDataV2';
 
 /**
- * TableGridExCont Component: Description of the behavior...
+ * RefetchExCont Component: Description of the behavior...
  * @returns {JSX.Element}
  */
-export function TableGridExCont() {
+export function RefetchExCont() {
   // -----------------------CONSTS, HOOKS, STATES
-  const { data, refetch } = useQueryTableData();
+  const { data } = useQueryTableDataV2();
   const isData = data?.records?.length && !!data?.records?.[0]?.title;
-  const { toastComp } = useNotification();
   // -----------------------RENDER
 
   // -----------------------MAIN METHODS
   // -----------------------AUX METHODS
   // -----------------------RENDER
   return (
-    <div className={style['TableGridExCont']}>
-      {toastComp}
-      <Button type="button" iconType="fa-refresh" sizeType="small" onClick={refetch}>
-        Refresh
-      </Button>
+    <div className={style['RefetchExCont']}>
       <Table bordered borderless>
         <TableHead>
           <TableRow>
